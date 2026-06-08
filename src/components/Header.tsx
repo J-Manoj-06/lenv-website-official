@@ -48,12 +48,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="text-lg font-semibold text-foreground/80 hover:text-primary transition-colors"
               >
                 {link.name}
               </Link>
@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <button className="relative overflow-hidden rounded-full bg-foreground text-background px-6 py-2.5 font-medium text-sm transition-transform hover:scale-105 active:scale-95 group">
+            <button className="relative overflow-hidden rounded-full bg-foreground text-background px-8 py-3.5 font-bold text-base transition-transform hover:scale-105 active:scale-95 group">
               <span className="relative z-10">Request Demo</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="absolute inset-0 bg-gradient-to-r from-primary to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-overlay" />
