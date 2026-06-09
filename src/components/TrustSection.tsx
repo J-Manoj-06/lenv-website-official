@@ -9,6 +9,38 @@ export default function TrustSection() {
     <section className="py-20 relative z-10">
       <div className="container mx-auto px-4 md:px-6">
         
+        {/* Section Title */}
+        <div className="text-center max-w-3xl mx-auto mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-sm tracking-wide uppercase mb-6"
+          >
+            What's Inside
+          </motion.div>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-foreground mb-6"
+          >
+            Core Features of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold">LenV</span>
+          </motion.h2>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-xl text-foreground/70"
+          >
+            Discover the powerful tools designed to seamlessly connect and elevate students, teachers, parents, and institutions in one intelligent ecosystem.
+          </motion.p>
+        </div>
+
         {/* Student Test Assignment Showcase */}
         <div className="mb-32 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <motion.div 
@@ -320,7 +352,7 @@ export default function TrustSection() {
         </div>
 
         {/* Attendance Showcase */}
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+        <div className="mb-32 flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -378,6 +410,130 @@ export default function TrustSection() {
             {/* Decorative elements */}
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-rose-500/30 blur-[40px] rounded-full z-[-1]" />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-500/20 blur-[50px] rounded-full z-[-1]" />
+          </motion.div>
+        </div>
+
+        {/* Mistake Book Showcase */}
+        <div className="mb-32 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 space-y-6"
+          >
+            <div className="inline-block px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-semibold text-sm tracking-wide uppercase">
+              Adaptive Learning
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight">
+              The Smart <br/>Mistake Book
+            </h2>
+            <p className="text-lg text-foreground/70 leading-relaxed max-w-xl">
+              Turn errors into opportunities for mastery. When a student makes a mistake on a test, 
+              the question is automatically saved to their personalized Mistake Book and dynamically 
+              reassigned every week until they confidently conquer it.
+            </p>
+            <ul className="space-y-4 pt-4">
+              {[
+                "Auto-capture of incorrect test answers",
+                "Weekly spaced repetition for mastery",
+                "Personalized focus areas for every student"
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-4 text-foreground/80 font-medium">
+                  <div className="w-8 h-8 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 w-full relative"
+          >
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(99,102,241,0.15)] group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-blue-500/20 mix-blend-overlay opacity-50 group-hover:opacity-0 transition-opacity duration-500" />
+              <Image 
+                src="/mistake.png" 
+                alt="LenV Mistake Book Interface" 
+                width={800} 
+                height={600}
+                className="w-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-6 -right-6 w-24 h-24 bg-indigo-500/30 blur-[40px] rounded-full z-[-1]" />
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500/20 blur-[50px] rounded-full z-[-1]" />
+          </motion.div>
+        </div>
+
+        {/* Mindmap Showcase */}
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 space-y-6"
+          >
+            <div className="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 font-semibold text-sm tracking-wide uppercase">
+              Visual Learning
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight">
+              Interactive Mindmaps <br/>for Instant Revision
+            </h2>
+            <p className="text-lg text-foreground/70 leading-relaxed max-w-xl">
+              Simplify complex topics and accelerate exam preparation. Teachers can easily build dynamic, 
+              interactive mindmaps and instantly share them directly to class groups, making revision highly 
+              visual, organized, and much easier to digest.
+            </p>
+            <ul className="space-y-4 pt-4">
+              {[
+                "Intuitive drag-and-drop mindmap builder",
+                "Instant sharing to student groups",
+                "Boosts retention through visual learning"
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-4 text-foreground/80 font-medium">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                  </div>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 w-full relative"
+          >
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(245,158,11,0.15)] group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/20 to-yellow-500/20 mix-blend-overlay opacity-50 group-hover:opacity-0 transition-opacity duration-500" />
+              <Image 
+                src="/mindmap.png" 
+                alt="LenV Interactive Mindmaps" 
+                width={800} 
+                height={600}
+                className="w-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-amber-500/30 blur-[40px] rounded-full z-[-1]" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-500/20 blur-[50px] rounded-full z-[-1]" />
           </motion.div>
         </div>
       </div>
