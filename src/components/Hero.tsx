@@ -90,9 +90,6 @@ export default function Hero() {
 
         </div>
       </div>
-      
-      {/* Ambient Floor Glow */}
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#FF7A00]/10 to-transparent pointer-events-none" />
     </section>
   );
 }
