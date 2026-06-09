@@ -2,9 +2,6 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import * as admin from "firebase-admin";
 
-// Initialize Resend
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Initialize Firebase Admin safely
 if (!admin.apps.length) {
   try {
@@ -46,6 +43,8 @@ export async function POST(request: Request) {
 
     // 2. Send Email Notification (only if Resend is configured)
     if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      
       const emailHtml = `
         <h2>New Demo Request</h2>
         
