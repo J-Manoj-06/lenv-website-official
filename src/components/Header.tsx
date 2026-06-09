@@ -5,11 +5,13 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useDemoModal } from "@/context/DemoModalContext";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const { openModal } = useDemoModal();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
@@ -62,7 +64,10 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <button className="relative overflow-hidden rounded-full bg-foreground text-background px-8 py-3.5 font-bold text-base transition-transform hover:scale-105 active:scale-95 group">
+            <button 
+              onClick={openModal}
+              className="relative overflow-hidden rounded-full bg-foreground text-background px-8 py-3.5 font-bold text-base transition-transform hover:scale-105 active:scale-95 group"
+            >
               <span className="relative z-10">Request Demo</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="absolute inset-0 bg-gradient-to-r from-primary to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-overlay" />
@@ -97,7 +102,13 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
-          <button className="w-full rounded-full bg-gradient-to-r from-primary to-gold text-black px-6 py-3 font-semibold mt-4">
+          <button 
+            onClick={() => {
+              setMobileMenuOpen(false);
+              openModal();
+            }}
+            className="w-full rounded-full bg-gradient-to-r from-primary to-gold text-black px-6 py-3 font-semibold mt-4"
+          >
             Request Demo
           </button>
         </motion.div>

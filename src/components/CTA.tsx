@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useDemoModal } from "@/context/DemoModalContext";
 
 export default function CTA() {
+  const { openModal } = useDemoModal();
   return (
     <section className="py-24 relative z-10 px-4 md:px-6">
       <div className="container mx-auto">
@@ -30,7 +32,10 @@ export default function CTA() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-6">
-              <button className="group relative w-full sm:w-auto overflow-hidden rounded-full bg-gradient-to-r from-primary to-gold p-[1px] transition-transform hover:scale-105 active:scale-95">
+              <button 
+                onClick={openModal}
+                className="group relative w-full sm:w-auto overflow-hidden rounded-full bg-gradient-to-r from-primary to-gold p-[1px] transition-transform hover:scale-105 active:scale-95"
+              >
                 <span className="relative flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-gold px-10 py-4 text-base font-bold text-black transition-all hover:opacity-90">
                   Request Demo <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </span>

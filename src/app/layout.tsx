@@ -4,6 +4,8 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import LiquidAuroraBackground from "@/components/LiquidAuroraBackground";
 import { cn } from "@/lib/utils";
+import { DemoModalProvider } from "@/context/DemoModalContext";
+import RequestDemoModal from "@/components/RequestDemoModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,10 +30,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(inter.variable, outfit.variable, "antialiased dark")}>
       <body className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-white">
-        <LiquidAuroraBackground />
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+        <DemoModalProvider>
+          {/* Gemini-style Flowing Animated Border */}
+          <div className="gemini-animated-border" />
+          
+          <LiquidAuroraBackground />
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+          
+          <RequestDemoModal />
+        </DemoModalProvider>
       </body>
     </html>
   );
