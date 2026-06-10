@@ -67,25 +67,7 @@ export default function Hero() {
               The complete platform connecting schools, teachers, parents, and students in one intelligent ecosystem designed to elevate everyone.
             </motion.p>
 
-            {/* Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto"
-            >
-              <button className="group relative w-full sm:w-auto overflow-hidden rounded-full bg-gradient-to-r from-primary to-gold p-[1px] transition-transform hover:scale-105 active:scale-95">
-                <span className="relative flex items-center justify-center gap-2 rounded-full bg-black px-8 py-4 text-sm font-semibold text-white transition-all group-hover:bg-opacity-0">
-                  Explore LenV <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
-              <button className="flex items-center justify-center gap-3 text-foreground/90 font-medium hover:text-white transition-colors group">
-                <div className="w-12 h-12 rounded-full glass flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                  <Play size={18} className="text-white ml-1" />
-                </div>
-                View Dashboards
-              </button>
-            </motion.div>
+            {/* Removed buttons as requested */}
           </div>
 
         </div>

@@ -40,9 +40,6 @@ export default function CTA() {
                   Request Demo <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>
-              <button className="w-full sm:w-auto rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white px-10 py-4 font-semibold transition-colors">
-                Contact Sales
-              </button>
             </div>
           </div>
         </motion.div>
