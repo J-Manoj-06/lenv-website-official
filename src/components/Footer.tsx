@@ -137,16 +137,19 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="relative z-10 pt-20 pb-10 border-t border-white/10 bg-[#0a0a0a]/80 backdrop-blur-md">
+      <footer className="bg-background text-foreground py-16 border-t border-foreground/10 relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
+        
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center max-w-md mx-auto mb-16">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-gold flex items-center justify-center">
-                <span className="text-black font-heading font-bold text-lg leading-none">L</span>
+              <div className="w-10 h-10 rounded-full bg-foreground/5 border border-foreground/10 flex items-center justify-center text-foreground/60 hover:text-primary hover:bg-primary/10 hover:border-primary/30 transition-all duration-300">
+                <span className="font-heading font-bold text-lg leading-none">L</span>
               </div>
               <span className="font-heading font-bold text-2xl tracking-tight">LenV</span>
             </Link>
-            <p className="text-foreground/60 mb-8 leading-relaxed">
+            <p className="text-foreground/60 text-sm max-w-sm mb-6 leading-relaxed">
               One Connected Ecosystem for Modern Education. Transforming how schools, teachers, parents, and students collaborate.
             </p>
             <div className="flex items-center justify-center gap-4 text-foreground/40">
@@ -165,24 +168,24 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/40">
+          <div className="pt-8 border-t border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/40">
             <p>© {currentYear} LenV Technologies Inc. All rights reserved.</p>
             <div className="flex gap-6">
               <button 
                 onClick={() => openModal("Privacy Policy", PrivacyPolicyContent)}
-                className="hover:text-white transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 Privacy Policy
               </button>
               <button 
                 onClick={() => openModal("Terms of Service", TermsOfServiceContent)}
-                className="hover:text-white transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 Terms of Service
               </button>
               <button 
                 onClick={() => openModal("Cookie Policy", CookiePolicyContent)}
-                className="hover:text-white transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 Cookie Policy
               </button>

@@ -6,6 +6,7 @@ import LiquidAuroraBackground from "@/components/LiquidAuroraBackground";
 import { cn } from "@/lib/utils";
 import { DemoModalProvider } from "@/context/DemoModalContext";
 import RequestDemoModal from "@/components/RequestDemoModal";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,19 +29,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(inter.variable, outfit.variable, "antialiased dark")}>
-      <body className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-white">
-        <DemoModalProvider>
-          {/* Gemini-style Flowing Animated Border */}
-          <div className="gemini-animated-border" />
-          
-          <LiquidAuroraBackground />
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
-          
-          <RequestDemoModal />
-        </DemoModalProvider>
+    <html lang="en" suppressHydrationWarning className={cn(inter.variable, outfit.variable)}>
+      <body className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-black dark:selection:text-white transition-colors duration-300">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <DemoModalProvider>
+            {/* Gemini-style Flowing Animated Border */}
+            <div className="gemini-animated-border" />
+            
+            <LiquidAuroraBackground />
+            <SmoothScroll>
+              {children}
+            </SmoothScroll>
+            
+            <RequestDemoModal />
+          </DemoModalProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

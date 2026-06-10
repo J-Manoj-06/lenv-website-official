@@ -219,12 +219,12 @@ function FeatureRow({ feature }: { feature: FeatureData }) {
           className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight" 
           dangerouslySetInnerHTML={{ __html: feature.title }} 
         />
-        <p className="text-lg text-foreground/70 leading-relaxed max-w-xl">
+        <p className="text-lg text-foreground-muted leading-relaxed max-w-xl">
           {feature.description}
         </p>
         <ul className="space-y-4 pt-4">
           {feature.bullets.map((item, i) => (
-            <li key={i} className="flex items-center gap-4 text-foreground/80 font-medium">
+            <li key={i} className="flex items-center gap-4 text-foreground-secondary font-medium">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${feature.colors.iconBg}`}>
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={feature.svg} />
@@ -246,7 +246,7 @@ function FeatureRow({ feature }: { feature: FeatureData }) {
       >
         <motion.div 
           style={{ scale: imgScale }}
-          className={`relative rounded-2xl overflow-hidden border border-white/10 ${feature.colors.shadow} group transform origin-center`}
+          className={`relative rounded-2xl overflow-hidden border border-foreground/10 ${feature.colors.shadow} group transform origin-center`}
         >
           <div className={`absolute inset-0 bg-gradient-to-tr ${feature.colors.glowPrimary} ${feature.colors.glowSecondary} mix-blend-overlay opacity-50 group-hover:opacity-0 transition-opacity duration-500`} />
           <Image 

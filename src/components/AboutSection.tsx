@@ -59,9 +59,9 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="p-8 rounded-3xl glass-card hover:bg-white/5 transition-all duration-300 group"
+              className="p-8 rounded-3xl glass-card hover:bg-foreground/5 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-black/50 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-foreground/5 border border-foreground/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 {benefit.icon}
               </div>
               <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>

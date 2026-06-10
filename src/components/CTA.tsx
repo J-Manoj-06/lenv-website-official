@@ -24,10 +24,10 @@ export default function CTA() {
           <div className="absolute -bottom-1/2 -left-1/4 w-[100%] h-[150%] rounded-full bg-[#FFB347]/10 blur-[120px] pointer-events-none" />
 
           <div className="relative z-10 p-12 md:p-24 flex flex-col items-center text-center">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 max-w-4xl">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 max-w-4xl text-white">
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold">Transform</span> Your School?
             </h2>
-            <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mb-10">
+            <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-10">
               Join hundreds of institutions worldwide that have modernized their educational management with LenV.
             </p>
             

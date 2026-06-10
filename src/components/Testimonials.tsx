@@ -61,7 +61,7 @@ export default function Testimonials() {
          >
             {/* Duplicate list for seamless looping */}
             {[...testimonials, ...testimonials].map((testimonial, i) => (
-              <div key={i} className="w-[350px] md:w-[450px] p-8 rounded-3xl glass-card flex flex-col gap-6 border border-white/5">
+              <div key={i} className="w-[350px] md:w-[450px] p-8 rounded-3xl glass-card flex flex-col gap-6 border border-foreground/5">
                 <div className="flex text-gold gap-1">
                   {[1,2,3,4,5].map(star => <Star key={star} size={18} fill="currentColor" />)}
                 </div>

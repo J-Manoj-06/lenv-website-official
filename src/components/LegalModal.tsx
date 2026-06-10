@@ -59,16 +59,16 @@ export default function LegalModal({ isOpen, onClose, title, content }: LegalMod
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-3xl bg-dark-gray/95 backdrop-blur-2xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-2xl overflow-hidden my-8 flex flex-col max-h-[85vh]"
+            className="relative w-full max-w-4xl max-h-[85vh] bg-background/90 dark:bg-dark-gray/90 backdrop-blur-xl border border-foreground/10 shadow-[0_0_50px_rgba(0,0,0,0.2)] dark:shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-2xl flex flex-col my-8"
           >
             {/* Sticky Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-black/40 backdrop-blur-md sticky top-0 z-10">
-              <h2 className="text-xl md:text-2xl font-heading font-bold text-white tracking-tight">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-foreground/10 bg-foreground/5 shrink-0">
+              <h2 className="text-xl md:text-2xl font-heading font-bold text-foreground">
                 {title}
               </h2>
               <button
                 onClick={onClose}
-                className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-colors flex-shrink-0"
+                className="p-2 text-foreground/60 hover:text-foreground hover:bg-foreground/10 rounded-full transition-colors"
               >
                 <X size={20} />
               </button>
@@ -76,10 +76,10 @@ export default function LegalModal({ isOpen, onClose, title, content }: LegalMod
 
             {/* Scrollable Body */}
             <div 
-              className="p-6 md:p-8 overflow-y-auto custom-scrollbar flex-1 text-foreground/80 leading-relaxed"
+              className="p-6 md:p-8 overflow-y-auto custom-scrollbar text-foreground/80 space-y-6"
               data-lenis-prevent="true"
             >
-              <div className="prose prose-invert prose-p:text-foreground/80 prose-headings:text-white prose-a:text-primary max-w-none">
+              <div className="prose prose-invert prose-p:text-foreground/80 prose-headings:text-foreground prose-a:text-primary max-w-none">
                 {content}
               </div>
             </div>

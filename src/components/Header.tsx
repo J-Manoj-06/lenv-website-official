@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useDemoModal } from "@/context/DemoModalContext";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +47,7 @@ export default function Header() {
             <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-primary to-gold flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-105">
               <span className="text-black font-heading font-black text-2xl md:text-3xl leading-none">L</span>
             </div>
-            <span className="font-heading font-black text-3xl md:text-4xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80">LenV</span>
+            <span className="font-heading font-black text-3xl md:text-4xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/80">LenV</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -62,8 +63,9 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA */}
-          <div className="hidden md:block">
+          {/* Desktop CTA & Theme Toggle */}
+          <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <button 
               onClick={openModal}
               className="relative overflow-hidden rounded-full bg-foreground text-background px-8 py-3.5 font-bold text-base transition-transform hover:scale-105 active:scale-95 group"
@@ -90,7 +92,7 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-full left-4 right-4 mt-2 p-6 rounded-3xl glass-card border border-white/10 flex flex-col gap-6 md:hidden"
+          className="absolute top-full left-4 right-4 mt-2 p-6 rounded-3xl glass-card border border-foreground/10 flex flex-col gap-6 md:hidden"
         >
           {navLinks.map((link) => (
             <Link
@@ -102,15 +104,19 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
-          <button 
-            onClick={() => {
-              setMobileMenuOpen(false);
-              openModal();
-            }}
-            className="w-full rounded-full bg-gradient-to-r from-primary to-gold text-black px-6 py-3 font-semibold mt-4"
-          >
-            Request Demo
-          </button>
+          {/* Mobile CTA */}
+          <div className="flex items-center justify-between gap-4 pt-4 border-t border-foreground/10">
+            <ThemeToggle />
+            <button 
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openModal();
+              }}
+              className="flex-1 rounded-full bg-gradient-to-r from-primary to-gold text-black px-6 py-3 font-semibold"
+            >
+              Request Demo
+            </button>
+          </div>
         </motion.div>
       )}
     </header>

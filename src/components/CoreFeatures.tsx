@@ -57,11 +57,11 @@ export default function CoreFeatures() {
               viewport={{ once: true }}
               transition={{ delay: (idx % 4) * 0.1, duration: 0.5 }}
               whileHover={{ y: -5 }}
-              className="p-6 rounded-2xl glass-card border border-white/5 hover:border-primary/50 transition-colors group relative overflow-hidden"
+              className="p-6 rounded-2xl glass-card border border-foreground/5 hover:border-primary/50 transition-colors group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-black/40 border border-white/10 flex items-center justify-center text-foreground/80 group-hover:text-primary transition-colors mb-4 group-hover:scale-110 duration-300">
+                <div className="w-12 h-12 rounded-xl bg-foreground/5 border border-foreground/10 flex items-center justify-center text-foreground/80 group-hover:text-primary transition-colors mb-4 group-hover:scale-110 duration-300">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-bold mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-gold transition-all">

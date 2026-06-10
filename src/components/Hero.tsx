@@ -8,6 +8,7 @@ import ConnectedEcosystem from "./ConnectedEcosystem";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background z-[1] pointer-events-none" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           

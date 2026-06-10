@@ -156,16 +156,16 @@ export default function RequestDemoModal() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-4xl bg-dark-gray/90 backdrop-blur-xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-2xl overflow-hidden my-8"
+            className="relative w-full max-w-4xl bg-background/90 dark:bg-dark-gray/90 backdrop-blur-xl border border-foreground/10 shadow-[0_0_50px_rgba(0,0,0,0.2)] dark:shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-2xl overflow-hidden my-8"
           >
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-white/5">
-              <h2 className="text-xl md:text-2xl font-heading font-bold text-white">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-foreground/10 bg-foreground/5">
+              <h2 className="text-xl md:text-2xl font-heading font-bold text-foreground">
                 Request a LenV Demo
               </h2>
               <button
                 onClick={closeModal}
-                className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-colors"
+                className="p-2 text-foreground/60 hover:text-foreground hover:bg-foreground/10 rounded-full transition-colors"
               >
                 <X size={20} />
               </button>
@@ -185,7 +185,7 @@ export default function RequestDemoModal() {
                   <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle className="w-10 h-10 text-green-400" />
                   </div>
-                  <h3 className="text-3xl font-heading font-bold text-white mb-4">Thank You!</h3>
+                  <h3 className="text-3xl font-heading font-bold text-foreground mb-4">Thank You!</h3>
                   <p className="text-foreground/70 text-lg max-w-md">
                     Your demo request has been received successfully.
                     <br/><br/>
@@ -197,26 +197,26 @@ export default function RequestDemoModal() {
                   
                   {/* SECTION 1: Contact Person */}
                   <section>
-                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-white/5">1. Contact Person</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-foreground/5">1. Contact Person</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Full Name *</label>
-                        <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="John Doe" />
+                        <label className="text-sm font-medium text-foreground/80">Full Name *</label>
+                        <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="John Doe" />
                         {errors.fullName && <p className="text-red-400 text-xs">{errors.fullName}</p>}
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Designation / Role *</label>
-                        <input type="text" name="designation" value={formData.designation} onChange={handleChange} required className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="Principal / Director" />
+                        <label className="text-sm font-medium text-foreground/80">Designation / Role *</label>
+                        <input type="text" name="designation" value={formData.designation} onChange={handleChange} required className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="Principal / Director" />
                         {errors.designation && <p className="text-red-400 text-xs">{errors.designation}</p>}
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Official Email *</label>
-                        <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="john@school.edu" />
+                        <label className="text-sm font-medium text-foreground/80">Official Email *</label>
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="john@school.edu" />
                         {errors.email && <p className="text-red-400 text-xs">{errors.email}</p>}
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Mobile Number *</label>
-                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="+1 234 567 8900" />
+                        <label className="text-sm font-medium text-foreground/80">Mobile Number *</label>
+                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="+1 234 567 8900" />
                         {errors.phone && <p className="text-red-400 text-xs">{errors.phone}</p>}
                       </div>
                     </div>
@@ -224,16 +224,16 @@ export default function RequestDemoModal() {
 
                   {/* SECTION 2: School Information */}
                   <section>
-                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-white/5">2. School Information</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-foreground/5">2. School Information</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2 md:col-span-2">
-                        <label className="text-sm font-medium text-white/80">School Name *</label>
-                        <input type="text" name="schoolName" value={formData.schoolName} onChange={handleChange} required className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="Global International Academy" />
+                        <label className="text-sm font-medium text-foreground/80">School Name *</label>
+                        <input type="text" name="schoolName" value={formData.schoolName} onChange={handleChange} required className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="Global International Academy" />
                         {errors.schoolName && <p className="text-red-400 text-xs">{errors.schoolName}</p>}
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Institution Type</label>
-                        <select name="institutionType" value={formData.institutionType} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors appearance-none">
+                        <label className="text-sm font-medium text-foreground/80">Institution Type</label>
+                        <select name="institutionType" value={formData.institutionType} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors appearance-none">
                           <option value="School">School</option>
                           <option value="College">College</option>
                           <option value="Coaching Center">Coaching Center</option>
@@ -242,8 +242,8 @@ export default function RequestDemoModal() {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Board / Curriculum</label>
-                        <select name="board" value={formData.board} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors appearance-none">
+                        <label className="text-sm font-medium text-foreground/80">Board / Curriculum</label>
+                        <select name="board" value={formData.board} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors appearance-none">
                           <option value="CBSE">CBSE</option>
                           <option value="ICSE">ICSE</option>
                           <option value="State Board">State Board</option>
@@ -253,56 +253,56 @@ export default function RequestDemoModal() {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Location (City, State, Country)</label>
-                        <input type="text" name="location" value={formData.location} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="New York, NY, USA" />
+                        <label className="text-sm font-medium text-foreground/80">Location (City, State, Country)</label>
+                        <input type="text" name="location" value={formData.location} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="New York, NY, USA" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Website (Optional)</label>
-                        <input type="url" name="website" value={formData.website} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="https://www.school.edu" />
+                        <label className="text-sm font-medium text-foreground/80">Website (Optional)</label>
+                        <input type="url" name="website" value={formData.website} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="https://www.school.edu" />
                       </div>
                     </div>
                   </section>
 
                   {/* SECTION 3: School Size */}
                   <section>
-                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-white/5">3. School Size</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-foreground/5">3. School Size</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Total Students</label>
-                        <input type="number" name="totalStudents" value={formData.totalStudents} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="e.g. 1500" />
+                        <label className="text-sm font-medium text-foreground/80">Total Students</label>
+                        <input type="number" name="totalStudents" value={formData.totalStudents} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="e.g. 1500" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Total Teachers</label>
-                        <input type="number" name="totalTeachers" value={formData.totalTeachers} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="e.g. 120" />
+                        <label className="text-sm font-medium text-foreground/80">Total Teachers</label>
+                        <input type="number" name="totalTeachers" value={formData.totalTeachers} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="e.g. 120" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Number of Campuses</label>
-                        <input type="number" name="campuses" value={formData.campuses} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="e.g. 2" />
+                        <label className="text-sm font-medium text-foreground/80">Number of Campuses</label>
+                        <input type="number" name="campuses" value={formData.campuses} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" placeholder="e.g. 2" />
                       </div>
                     </div>
                   </section>
 
                   {/* SECTION 4: Demo Scheduling */}
                   <section>
-                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-white/5">4. Demo Scheduling</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-foreground/5">4. Demo Scheduling</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Preferred Date</label>
-                        <input type="date" name="preferredDate" value={formData.preferredDate} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" />
+                        <label className="text-sm font-medium text-foreground/80">Preferred Date</label>
+                        <input type="date" name="preferredDate" value={formData.preferredDate} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-medium text-white/80">Preferred Time</label>
-                        <input type="time" name="preferredTime" value={formData.preferredTime} onChange={handleChange} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors" />
+                        <label className="text-sm font-medium text-foreground/80">Preferred Time</label>
+                        <input type="time" name="preferredTime" value={formData.preferredTime} onChange={handleChange} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors" />
                       </div>
                     </div>
                   </section>
 
                   {/* SECTION 5: Additional Requirements */}
                   <section>
-                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-white/5">5. Additional Requirements</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 pb-2 border-b border-foreground/5">5. Additional Requirements</h3>
                     <div className="space-y-2">
-                      <label className="text-sm font-medium text-white/80">How can we help you?</label>
-                      <textarea name="message" value={formData.message} onChange={handleChange} rows={4} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder="Tell us about specific challenges you want to solve..." />
+                      <label className="text-sm font-medium text-foreground/80">How can we help you?</label>
+                      <textarea name="message" value={formData.message} onChange={handleChange} rows={4} className="w-full bg-foreground/5 border border-foreground/10 rounded-lg px-4 py-2.5 text-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder="Tell us about specific challenges you want to solve..." />
                     </div>
                   </section>
 
@@ -314,7 +314,7 @@ export default function RequestDemoModal() {
                   )}
 
                   {/* Submit Action */}
-                  <div className="pt-6 border-t border-white/10 flex justify-end">
+                  <div className="pt-6 border-t border-foreground/10 flex justify-end">
                     <button
                       type="submit"
                       disabled={status === "submitting"}

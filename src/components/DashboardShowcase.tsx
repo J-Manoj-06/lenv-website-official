@@ -154,7 +154,7 @@ export default function DashboardShowcase() {
   const [activeTab, setActiveTab] = useState(dashboards[0].id);
 
   return (
-    <section id="dashboards" className="py-24 relative z-10 bg-black/40 border-y border-white/5">
+    <section id="dashboards" className="py-24 relative z-10 bg-background/40 border-y border-foreground/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <motion.h2 
@@ -185,8 +185,8 @@ export default function DashboardShowcase() {
               className={cn(
                 "flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 font-medium",
                 activeTab === dashboard.id 
-                  ? "bg-white/10 border border-white/20 text-white shadow-lg" 
-                  : "bg-transparent text-foreground/60 hover:text-white hover:bg-white/5"
+                  ? "bg-foreground/10 border border-foreground/20 text-foreground shadow-lg" 
+                  : "bg-transparent text-foreground/60 hover:text-foreground hover:bg-foreground/5"
               )}
             >
               {dashboard.icon}
