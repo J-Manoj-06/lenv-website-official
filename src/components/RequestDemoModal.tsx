@@ -185,9 +185,11 @@ export default function RequestDemoModal() {
                   <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle className="w-10 h-10 text-green-400" />
                   </div>
-                  <h3 className="text-3xl font-heading font-bold text-white mb-4">Request Received!</h3>
+                  <h3 className="text-3xl font-heading font-bold text-white mb-4">Thank You!</h3>
                   <p className="text-foreground/70 text-lg max-w-md">
-                    Thank you! Our team will contact you shortly to schedule your personalized LenV demo.
+                    Your demo request has been received successfully.
+                    <br/><br/>
+                    Our team will contact you shortly.
                   </p>
                 </motion.div>
               ) : (
@@ -322,7 +324,7 @@ export default function RequestDemoModal() {
                         {status === "submitting" ? (
                           <>
                             <Loader2 className="w-5 h-5 animate-spin" />
-                            Submitting...
+                            Sending Request...
                           </>
                         ) : (
                           "Request My Demo"
