@@ -107,7 +107,7 @@ const features: FeatureData[] = [
     description: "Experience WhatsApp-like instant messaging designed exclusively for your education ecosystem. Chats and groups are automatically created and organized, ensuring students, teachers, parents, and institutions stay perfectly synced from anywhere.",
     bullets: ["Familiar, fast chat interface", "Auto-generated role-based groups", "Secure, centralized communication"],
     svg: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
-    img: "/messaging.png",
+    img: "/messaging-final.png",
     isReversed: false,
     colors: {
       badgeBg: "bg-emerald-500/10 border-emerald-500/20",
@@ -202,7 +202,7 @@ function FeatureRow({ feature }: { feature: FeatureData }) {
     <motion.div 
       ref={containerRef}
       style={{ opacity: rowOpacity }}
-      className={`mb-40 flex flex-col lg:${feature.isReversed ? 'flex-row-reverse' : 'flex-row'} items-center gap-12 lg:gap-20`}
+      className={`mb-40 flex flex-col items-center gap-12 lg:gap-20 ${feature.isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
     >
       {/* Content Side */}
       <motion.div 
