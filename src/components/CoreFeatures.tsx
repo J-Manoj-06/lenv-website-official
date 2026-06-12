@@ -8,20 +8,20 @@ import {
 } from "lucide-react";
 
 const features = [
-  { icon: <CalendarCheck />, title: "Attendance Management", desc: "Automated tracking and reporting." },
-  { icon: <BookOpen />, title: "Assignment Tracking", desc: "Easily distribute and collect assignments." },
-  { icon: <CheckSquare />, title: "Homework Management", desc: "Keep track of daily tasks." },
-  { icon: <LineChart />, title: "Student Progress", desc: "Monitor academic growth over time." },
-  { icon: <Bell />, title: "Notifications", desc: "Instant alerts for important updates." },
-  { icon: <Rss />, title: "Announcements", desc: "Broadcast messages institution-wide." },
-  { icon: <Users />, title: "Parent Communication", desc: "Bridge the gap between home and school." },
-  { icon: <Clock />, title: "Timetable Management", desc: "Organize schedules efficiently." },
-  { icon: <FileText />, title: "Academic Reports", desc: "Generate detailed performance reports." },
-  { icon: <Activity />, title: "Performance Analytics", desc: "Data-driven insights for improvement." },
-  { icon: <MessageSquare />, title: "Secure Messaging", desc: "Encrypted chats for all roles." },
-  { icon: <Shield />, title: "Multi-role Access", desc: "Role-based permissions and views." },
-  { icon: <RefreshCw />, title: "Real-time Sync", desc: "Always up-to-date information." },
-  { icon: <Cloud />, title: "Cloud-based", desc: "Access anywhere, anytime securely." }
+  { icon: <CalendarCheck />, title: "Attendance Management", desc: "Automated daily attendance tracking and reporting for teachers, with instant notifications sent to parents." },
+  { icon: <BookOpen />, title: "Assignment Tracking", desc: "Distribute, collect, and grade assignments digitally. Students and parents see deadlines in real time." },
+  { icon: <CheckSquare />, title: "Homework Management", desc: "Manage daily homework across all classes. Students submit online; teachers review from one dashboard." },
+  { icon: <LineChart />, title: "Student Progress Tracking", desc: "Monitor academic growth over time with visual analytics and performance trend reports." },
+  { icon: <Bell />, title: "Push Notifications", desc: "Instant alerts for attendance, grades, announcements, and important school updates." },
+  { icon: <Rss />, title: "School Announcements", desc: "Broadcast notices and circulars institution-wide to all stakeholders instantly." },
+  { icon: <Users />, title: "Parent-Teacher Communication", desc: "Secure messaging between parents and teachers — no personal numbers needed." },
+  { icon: <Clock />, title: "Timetable Management", desc: "Create, update, and share class schedules efficiently across the entire school." },
+  { icon: <FileText />, title: "Academic Reports", desc: "Generate detailed report cards and performance summaries for students and parents." },
+  { icon: <Activity />, title: "Performance Analytics", desc: "Data-driven insights to help schools identify strengths, weaknesses, and areas for improvement." },
+  { icon: <MessageSquare />, title: "Secure Messaging", desc: "End-to-end encrypted chat for all roles — students, teachers, parents, and administrators." },
+  { icon: <Shield />, title: "Multi-role Access Control", desc: "Role-based permissions ensure each user sees only what they need — nothing more, nothing less." },
+  { icon: <RefreshCw />, title: "Real-time Sync", desc: "All data syncs instantly across devices so everyone always has the latest information." },
+  { icon: <Cloud />, title: "Cloud-based Platform", desc: "Access LenV securely from any device, anywhere — no installations or local servers required." }
 ];
 
 export default function CoreFeatures() {
@@ -35,7 +35,8 @@ export default function CoreFeatures() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-heading font-bold mb-6"
           >
-            Everything You Need, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold">Built-In.</span>
+            Complete School Management Features,{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold">Built-In</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +45,7 @@ export default function CoreFeatures() {
             transition={{ delay: 0.1 }}
             className="text-lg text-foreground/70 max-w-2xl mx-auto"
           >
-            A comprehensive suite of tools engineered to handle every aspect of modern education management.
+            A comprehensive school management system with every tool your institution needs — from attendance and timetables to communication and analytics.
           </motion.p>
         </div>
 

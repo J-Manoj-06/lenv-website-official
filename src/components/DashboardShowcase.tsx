@@ -12,7 +12,7 @@ const dashboards = [
     title: "Student Dashboard",
     icon: <GraduationCap size={20} />,
     color: "from-blue-500 to-cyan-400",
-    description: "Track assignments, view schedules, and monitor academic progress.",
+    description: "The student app for tracking assignments, viewing timetables, and monitoring academic progress — all in one place.",
     ui: (
       <div className="h-full bg-[#0a0a0a] text-white flex flex-col pt-12 p-4 gap-4">
         <div className="flex items-center justify-between">
@@ -47,7 +47,7 @@ const dashboards = [
     title: "Teacher Dashboard",
     icon: <BookOpen size={20} />,
     color: "from-orange-500 to-amber-400",
-    description: "Manage classes, mark attendance, and communicate with parents.",
+    description: "The teacher dashboard for managing classes, marking attendance, communicating with parents, and grading assignments.",
     ui: (
       <div className="h-full bg-[#0a0a0a] text-white flex flex-col pt-12 p-4 gap-4">
         <div className="flex items-center justify-between">
@@ -88,7 +88,7 @@ const dashboards = [
     title: "Parent Dashboard",
     icon: <Users size={20} />,
     color: "from-purple-500 to-pink-500",
-    description: "Monitor attendance, track academic progress, and stay informed.",
+    description: "The parent app for monitoring attendance, tracking academic progress, and staying informed about school activities.",
     ui: (
       <div className="h-full bg-[#0a0a0a] text-white flex flex-col pt-12 p-4 gap-4">
         <div className="flex items-center gap-3 bg-white/5 rounded-full p-1 pr-4 border border-white/10">
@@ -120,7 +120,7 @@ const dashboards = [
     title: "Principal Dashboard",
     icon: <Building size={20} />,
     color: "from-emerald-500 to-teal-400",
-    description: "Monitor institution-wide performance and oversee operations.",
+    description: "The principal dashboard for monitoring institution-wide performance, staff management, and operational oversight.",
     ui: (
       <div className="h-full bg-[#0a0a0a] text-white flex flex-col pt-12 p-4 gap-4">
         <div className="font-bold text-lg">Institution Overview</div>
@@ -163,7 +163,7 @@ export default function DashboardShowcase() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-heading font-bold mb-6"
           >
-            Built for <span className="text-gradient">Every Role</span>
+            Dedicated Dashboards for <span className="text-gradient">Every Role</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -172,7 +172,7 @@ export default function DashboardShowcase() {
             transition={{ delay: 0.1 }}
             className="text-lg text-foreground/70 max-w-2xl mx-auto"
           >
-            A tailored experience for students, teachers, parents, and principals.
+            Every school app user gets a tailored mobile experience — students, teachers, parents, and principals each see exactly what they need.
           </motion.p>
         </div>
 

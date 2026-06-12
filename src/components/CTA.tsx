@@ -25,10 +25,10 @@ export default function CTA() {
 
           <div className="relative z-10 p-12 md:p-24 flex flex-col items-center text-center">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 max-w-4xl text-white">
-              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold">Transform</span> Your School?
+              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold">Modernize</span> Your School Management?
             </h2>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-10">
-              Join hundreds of institutions worldwide that have modernized their educational management with LenV.
+              Join institutions that have transformed their school administration with LenV. Request a free demo and see the all-in-one education platform in action.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -37,7 +37,7 @@ export default function CTA() {
                 className="group relative w-full sm:w-auto overflow-hidden rounded-full bg-gradient-to-r from-primary to-gold p-[1px] transition-transform hover:scale-105 active:scale-95"
               >
                 <span className="relative flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-gold px-10 py-4 text-base font-bold text-black transition-all hover:opacity-90">
-                  Request Demo <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  Request a Free Demo <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </button>
             </div>

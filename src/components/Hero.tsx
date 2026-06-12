@@ -49,14 +49,14 @@ export default function Hero() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-gold"> make the topper list.</span>
             </motion.h1>
 
-            <motion.h2
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground/80 mb-8"
             >
               We're here for the other 47.
-            </motion.h2>
+            </motion.p>
 
             {/* Subheadline */}
             <motion.p
@@ -65,7 +65,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-lg md:text-xl text-foreground/70 max-w-xl mb-12 leading-relaxed"
             >
-              The complete platform connecting schools, teachers, parents, and students in one intelligent ecosystem designed to elevate everyone.
+              The all-in-one school management platform connecting schools, teachers, parents, and students. From attendance tracking to academic analytics — one intelligent ecosystem designed to elevate every learner.
             </motion.p>
 
             {/* Removed buttons as requested */}

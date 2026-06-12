@@ -7,22 +7,22 @@ const benefits = [
   {
     icon: <Network className="w-6 h-6 text-primary" />,
     title: "Centralized Communication",
-    description: "Break down silos with a single platform for announcements, messaging, and updates across all roles.",
+    description: "Eliminate communication silos with a unified platform for announcements, instant messaging, and updates across teachers, parents, and students — your complete school communication app.",
   },
   {
     icon: <Users className="w-6 h-6 text-gold" />,
     title: "Better Collaboration",
-    description: "Seamlessly connect teachers, students, and parents to support the educational journey together.",
+    description: "Strengthen parent-teacher communication and student engagement by connecting every stakeholder on one smart education platform.",
   },
   {
     icon: <Zap className="w-6 h-6 text-primary" />,
     title: "Increased Efficiency",
-    description: "Automate administrative tasks, attendance tracking, and grading to focus more on teaching.",
+    description: "Automate administrative tasks like attendance tracking, timetable scheduling, and grading so your staff can focus on what matters most — teaching.",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-gold" />,
     title: "Improved Visibility",
-    description: "Real-time insights into academic progress, attendance, and institutional performance.",
+    description: "Access real-time student performance tracking, attendance analytics, and institutional reports from a single school administration dashboard.",
   },
 ];
 
@@ -38,7 +38,8 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-5xl font-heading font-bold mb-6"
           >
-            What is <span className="text-gradient">LenV?</span>
+            What is <span className="text-gradient">LenV?</span>{" "}
+            <span className="block text-2xl md:text-3xl font-semibold text-foreground/70 mt-2">The All-in-One School Management Platform</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +48,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg md:text-xl text-foreground/70 leading-relaxed"
           >
-            LenV is a unified education ecosystem designed to simplify communication, administration, academic management, student engagement, and institutional operations. We bring everyone together.
+            LenV is a unified school management system designed to simplify communication, administration, academic management, student engagement, and institutional operations. From homework and attendance to timetables and reports — we bring schools, teachers, parents, and students together in one smart ecosystem.
           </motion.p>
         </div>
 

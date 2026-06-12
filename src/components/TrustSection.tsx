@@ -251,7 +251,7 @@ function FeatureRow({ feature }: { feature: FeatureData }) {
           <div className={`absolute inset-0 bg-gradient-to-tr ${feature.colors.glowPrimary} ${feature.colors.glowSecondary} mix-blend-overlay opacity-50 group-hover:opacity-0 transition-opacity duration-500`} />
           <Image 
             src={feature.img} 
-            alt={feature.badge} 
+            alt={`LenV ${feature.badge} — ${feature.title.replace(/<br\s*\/?>/gi, ' ')}`} 
             width={800} 
             height={600}
             className="w-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105"

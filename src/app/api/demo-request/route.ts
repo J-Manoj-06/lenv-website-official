@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { resend } from "@/lib/resend";
+import { getResend } from "@/lib/resend";
 import * as admin from "firebase-admin";
 
 // Initialize Firebase Admin safely
@@ -118,7 +118,7 @@ export async function POST(request: Request) {
         `;
 
         // Send Confirmation to User
-        const confirmationResponse = await resend.emails.send({
+        const confirmationResponse = await getResend().emails.send({
           from: sender,
           to: data.email,
           subject: "Thank You for Requesting a LenV Demo",
@@ -130,7 +130,7 @@ export async function POST(request: Request) {
         }
 
         // Send Notification to LenV Team
-        const notificationResponse = await resend.emails.send({
+        const notificationResponse = await getResend().emails.send({
           from: sender,
           to: notificationEmail,
           subject: "🚀 New LenV Demo Request",

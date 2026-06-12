@@ -47,8 +47,17 @@ export default function Testimonials() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-heading font-bold mb-6"
           >
-            Loved by <span className="text-gradient">Educators</span>
+            Trusted by <span className="text-gradient">Schools, Teachers & Parents</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-foreground/70 max-w-2xl mx-auto"
+          >
+            See why educators and institutions love using LenV as their school management software.
+          </motion.p>
         </div>
       </div>
 

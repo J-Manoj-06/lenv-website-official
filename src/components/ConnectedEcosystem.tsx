@@ -73,7 +73,7 @@ export default function ConnectedEcosystem() {
       >
         <Image 
           src="/final-overall-image.png" 
-          alt="LenV Connected Ecosystem" 
+          alt="LenV school management platform ecosystem showing connected dashboards for students, teachers, parents, and administrators" 
           fill
           className="object-contain drop-shadow-[0_0_30px_rgba(255,122,0,0.3)]"
           priority
@@ -83,16 +83,17 @@ export default function ConnectedEcosystem() {
         {/* Golden 3D Premium LenV Text */}
         <div className="absolute z-30 flex items-center justify-center">
           <div className="px-6 py-2 md:px-8 md:py-3 rounded-2xl md:rounded-3xl bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(255,122,0,0.4),inset_0_0_15px_rgba(255,122,0,0.2)]">
-            <h2 
-              className="text-3xl md:text-5xl font-heading font-black tracking-wider text-transparent bg-clip-text"
+            <span 
+              className="text-3xl md:text-5xl font-heading font-black tracking-wider text-transparent bg-clip-text block"
               style={{
                 backgroundImage: "linear-gradient(to bottom, #FFFDE7, #FFD700 40%, #FF8C00 80%, #B8860B)",
                 filter: "drop-shadow(0px 5px 10px rgba(0,0,0,0.8)) drop-shadow(0px 0px 15px rgba(255,165,0,0.6))",
                 WebkitTextStroke: "1px rgba(255,255,255,0.3)"
               }}
+              aria-hidden="true"
             >
               LenV
-            </h2>
+            </span>
             <div className="absolute -inset-[1px] md:-inset-[2px] rounded-2xl md:rounded-3xl border border-[#FFD700]/30 animate-pulse pointer-events-none" />
           </div>
         </div>

@@ -19,8 +19,68 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "LenV | Transform Education",
-  description: "The complete platform connecting schools, teachers, parents, and students in one intelligent ecosystem.",
+  metadataBase: new URL("https://lenv1.app"),
+  title: "LenV – All-in-One School Management Software & Education Platform",
+  description:
+    "LenV is a smart school management platform connecting schools, teachers, parents, and students. Features include attendance tracking, homework management, timetable scheduling, parent-teacher communication, student progress analytics, and more. Request a free demo today.",
+  keywords: [
+    "school management software",
+    "school management system",
+    "education platform",
+    "school app",
+    "parent app",
+    "teacher app",
+    "student app",
+    "attendance tracking app",
+    "homework management",
+    "timetable management",
+    "parent teacher communication",
+    "school ERP",
+    "learning management system",
+    "student performance tracking",
+    "school communication app",
+    "institute management software",
+    "smart school software",
+    "school administration software",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://lenv1.app",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lenv1.app",
+    siteName: "LenV",
+    title: "LenV – All-in-One School Management Software & Education Platform",
+    description:
+      "Smart school management platform for attendance, communication, academics, and more. Built for schools, teachers, parents, and students. Request a free demo.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "LenV – All-in-One School Management Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LenV – All-in-One School Management Software",
+    description:
+      "Smart education platform connecting schools, teachers, parents & students. Attendance, communication, academics – all in one app.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
