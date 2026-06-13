@@ -47,7 +47,7 @@ export async function POST(request: Request) {
         // Use the notification email from env, fallback to onboarding if undefined during local testing
         const notificationEmail = process.env.NOTIFICATION_EMAIL || "onboarding@resend.dev";
         // Sender MUST be from verified domain in production, or onboarding@resend.dev in testing
-        const sender = "LenV <onboarding@resend.dev>"; 
+        const sender = process.env.RESEND_FROM_EMAIL || "LenV <onboarding@resend.dev>"; 
         
         // --- HTML TEMPLATES ---
 
